@@ -1,0 +1,103 @@
+Structured Approach to Gather Inputs
+1. Data Domain
+
+    Industry: Food & Hospitality
+    Use Case: Managing and analysing restaurant reservations to optimize table bookings, track customer preferences, and improve the dining experience.
+
+2. Data Structure
+
+    Format: Typically relational databases (SQL) for structured data or NoSQL (MongoDB) for flexible storage; JSON may be used if data is consumed by APIs.
+    Schema: Common tables or collections may include Restaurants, Customers, Reservations, Tables, Payments, and Reviews.
+
+3. Data Types and Fields
+
+    Data Types:
+        String: Restaurant ID, customer name, reservation ID, table ID, booking status
+        Integer/Float: Number of guests, rating, table capacity, total bill amount
+        Date/Timestamp: Reservation date, check-in time, check-out time, review timestamp
+
+    Fields:
+
+        Restaurant-related:
+            Restaurant ID (Unique identifier)
+            Restaurant name
+            Cuisine type (e.g., Italian, Indian, Chinese)
+            Location (Address, Latitude, Longitude)
+            Operating hours
+            Contact details (Phone, Email)
+            Total seating capacity
+
+        Customer-related:
+            Customer ID
+            Customer name
+            Phone number
+            Email address
+            Loyalty points (if applicable)
+            Special preferences (e.g., vegetarian, non-smoking area, window seating)
+
+        Reservation-related:
+            Reservation ID
+            Restaurant ID (Foreign key linking to Restaurants)
+            Customer ID (Foreign key linking to Customers)
+            Table ID (Foreign key linking to Tables)
+            Number of guests
+            Booking status (e.g., Confirmed, Cancelled, No-show, Completed)
+            Reservation date & time
+            Check-in timestamp
+            Check-out timestamp
+            Special requests (e.g., birthday celebration, high chair for kids)
+
+        Table-related:
+            Table ID
+            Restaurant ID (Foreign key linking to Restaurants)
+            Table number
+            Table capacity (e.g., 2-seater, 4-seater, 6-seater)
+            Availability status (e.g., Available, Reserved, Occupied)
+
+        Payment-related:
+            Payment ID
+            Reservation ID (Foreign key linking to Reservations)
+            Payment method (e.g., Credit Card, UPI, Cash)
+            Total bill amount
+            Transaction status (e.g., Successful, Failed, Pending)
+
+        Reviews and Ratings:
+            Review ID
+            Customer ID
+            Restaurant ID
+            Rating (e.g., 1-5)
+            Review comment
+            Review timestamp
+
+        Patterns:
+            Use of standardized formats for phone numbers, email addresses, timestamps, and payment transaction IDs.
+
+4. Data Volume and Variety
+
+    Volume: High frequency, with thousands of bookings, payments, and reviews per day reflecting real-time restaurant reservations.
+    Variety:
+        Diverse data reflecting different restaurant cuisines, table configurations, and peak booking hours
+        Variability in customer preferences, special requests, and payment options
+
+5. Data Relationships and Constraints
+
+    Relationships:
+        Restaurant ID acts as a foreign key in Reservations, Tables, and Reviews to associate data with specific restaurants.
+        Customer ID links to Reservations, Payments, and Reviews to track booking history and feedback.
+        Reservation ID in Reservations is linked to Payments for tracking transaction status.
+    Constraints:
+        Unique constraints on fields such as Restaurant ID, Reservation ID, Table ID, Payment ID, Customer ID.
+        Validation rules to ensure accurate table availability, booking time management, and rating scales (1-5).
+
+6. Data Quality and Realism
+
+    Realism:
+        Data should reflect actual restaurant booking conditions, including peak hours, cancellation patterns, table availability, and reservation trends.
+    Quality Standards:
+        Ensure consistency, accuracy, and completeness, particularly in customer reservations, restaurant operating hours, and payment records.
+
+7. Additional Requirements
+
+    Compatibility:
+        Data should integrate seamlessly with restaurant management systems, online booking platforms, CRM tools, and analytics dashboards (e.g., Tableau, Power BI).
+        Support for API-based data consumption to enable real-time booking status updates, notifications, and payment processing.
