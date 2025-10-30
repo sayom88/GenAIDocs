@@ -1,0 +1,55 @@
+Business Requirement Document For Mortgage Calculator
+
+1. Purpose of the Document
+The purpose of this document is to outline the business requirements for developing a Mortgage Eligibility Calculator for Nationwide. This calculator will allow users to get a rough idea of what you could borrow based on valid input parameters. The BRD is inspired by the functionality provided on the portal:
+https://www.nationwide.co.uk/mortgages/mortgage-calculators/borrowing-calculator/
+2. Scope
+The Mortgage Eligibility and Repayment Calculator will:
+
+1. Your main income details
+2. A rough idea of the property value
+3. Your deposit or loan amount.
+3. Business Objectives
+1. Provide an easy-to-use tool for first-time buyers to estimate their mortgage affordability.
+2. Enhance customer engagement by simplifying the mortgage decision-making process.
+3. Increase lead generation by collecting basic user information.
+4. Functional Requirements
+Nationwide Mortgage Calculator portal link is https://www.nationwide.co.uk/mortgages/mortgage-calculators/borrowing-calculator/
+Process Details:
+1.	Buyer Details:
+The user selects Buyer Details as "Buy your first home", indicating they are purchasing a property for the first time.
+2.	Property Price:
+The user enters the Property Price of €150,000 which forms the basis for determining their borrowing capacity.
+3.	Deposit Amount:
+The user enters the Deposit Amount of €10,000, which forms the basis of the amount of money user can put towards the cost of new property.
+4.	Length of Mortgage:
+The user inputs the Length of Mortgage as 10 years, which the calculator uses to assess the potential loan term and repayment options.
+5.	Number of People on the Mortgage:
+The user inputs Number of People on the Mortgage as 1, which forms the basis for determining the maximum number of people who can apply for a Nationwide mortgage.
+6.	Employment Status:
+The user inputs the Employment Status as Employed.
+7.	Basic Income:
+The user enters the Basic Income of €5,000 which forms the basis for determining the yearly basic income before tax and National Insurance deductions.
+8.	Get Results Trigger:
+The user clicks the "Get Results" button to initiate the computation of their maximum lending amount, and additional mortgage-related benefits.
+
+5. Non-Functional Requirements
+1. Performance: Results displayed within 2 seconds.
+2. Scalability: Handle up to 10,000 concurrent users.
+3. Accessibility: WCAG 2.1 compliance.
+4. Browser Compatibility: Support for major browsers.
+5. Security: Secure data handling; no sensitive data storage.
+6. Acceptance Criteria
+1. Correct computation of eligibility and repayments.
+2. Graceful handling of edge cases.
+3. Meaningful feedback for errors.
+4. Intuitive interface.
+5. Results align with business policies.
+7. Assumptions and Constraints
+1. Interest rates and income multipliers are subject to change.
+2. The calculator does not replace formal mortgage approval.
+3. Users are responsible for accurate data input.
+8. Dependencies
+1. Integration with regulatory/business-defined interest rate APIs.
+2. Hosting and deployment on the organization's web portal.
+
