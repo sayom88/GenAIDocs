@@ -1,0 +1,91 @@
+Functional Requirement Document (FRD)
+Flight Booking Application
+1. Introduction
+Purpose: Define functional requirements and system behavior.
+Scope: Flight search, booking, payment, user and admin management.
+2. Stakeholders
+End Users – Customers booking flights
+Admin Users – Manage system
+Payment Gateway – External provider
+Airline Systems – Flight data providers
+3. User Roles
+Guest User – Search flights
+Registered User – Book/manage bookings
+Admin – Manage system
+4. Functional Modules
+Flight Search
+Flight Selection
+Booking & Reservation
+Payment Processing
+Booking Management
+User Management
+Notifications
+Admin Module
+5. Flight Search Module
+Search by origin, destination, date
+One-way, round-trip, multi-city
+Display flight details
+Filter and sort results
+6. Flight Selection Module
+Select flight
+View fare details
+Select seat class
+Select seats
+7. Booking Module
+Enter passenger details
+Validate information
+Add multiple passengers
+Generate booking summary
+Confirm booking
+8. Payment Module
+Select payment method
+Redirect to gateway
+Process success/failure
+Confirm booking on success
+9. Booking Management
+View bookings
+Cancel bookings
+Modify bookings
+Trigger refunds
+10. User Management
+Register user
+Login/logout
+Update profile
+Reset password
+View booking history
+11. Notifications
+Booking confirmation
+Payment confirmation
+Cancellation notification
+Flight reminders
+12. Admin Module
+Manage flights
+View bookings
+Manage users
+Generate reports
+Manage pricing
+13. Process Flow
+Search → Select → Enter Details → Payment → Confirmation
+14. Business Rules
+Valid passenger details required
+Payment required for booking
+Cancellation per airline policy
+Dynamic seat availability
+15. Data Requirements
+User Data
+Flight Data
+Booking Data
+Payment Data
+16. External Interfaces
+Airline APIs
+Payment Gateway
+Notification Services
+17. Assumptions
+Accurate airline data
+Payment system availability
+Valid user inputs
+18. Acceptance Criteria
+Users can search and book flights
+Bookings confirmed after payment
+Users can manage bookings
+Notifications sent for events
